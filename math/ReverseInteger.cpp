@@ -16,20 +16,14 @@ using namespace std;
 class Solution {
  public:
   int reverse(int x) {
-    string input = to_string(abs(x));
-    string res;
+    long res = 0;
 
-    for (int i = input.size() - 1; i >= 0; i--) {
-      if (input[i] != '0' || !res.empty() || input.size() == 1) {
-        res += input[i];
-      }
+    while (x != 0) {
+      res = res * 10 + x % 10;
+      x /= 10;
     }
 
-    try {
-      return x < 0 ? -1 * stoi(res) : stoi(res);
-    } catch (out_of_range& exception) {
-      return 0;
-    }
+    return res > INT32_MAX || res < INT32_MIN ? 0 : res;
   }
 };
 
@@ -42,6 +36,7 @@ int main() {
   cout << to_string(Solution().reverse(120)) << endl;
   cout << to_string(Solution().reverse(0)) << endl;
   cout << to_string(Solution().reverse(1534236469)) << endl;
+  cout << to_string(Solution().reverse(-2147483648)) << endl;
 
   return 0;
 }
