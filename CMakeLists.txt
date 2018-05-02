@@ -3,6 +3,7 @@ project(LeetCodeProblemSet)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_executable(CountAndSay string/CountAndSay.cpp)
 add_executable(LongestCommonPrefix string/LongestCommonPrefix.cpp)
 add_executable(MergeTwoSortedLists list/MergeTwoSortedLists.cpp)
 add_executable(PalindromeNumber math/PalindromeNumber.cpp)
