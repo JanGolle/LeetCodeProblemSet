@@ -10,6 +10,7 @@ add_executable(RemoveDuplicatesFromTwoSortedArray array/RemoveDuplicatesFromTwoS
 add_executable(RemoveElement array/RemoveElement.cpp)
 add_executable(ReverseInteger math/ReverseInteger.cpp)
 add_executable(RomanToInteger math/RomanToInteger.cpp)
+add_executable(SearchInsertPosition array/SearchInsertPosition.cpp)
 add_executable(StrStr string/StrStr.cpp)
 add_executable(TwoSum array/TwoSum.cpp)
 add_executable(ValidParentheses string/ValidParentheses.cpp)
